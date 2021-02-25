@@ -16,18 +16,23 @@ const images = [
   },
 ];
 
+const makeImgListWithMarkup = ({url, alt}) => {
+  return `<li>
+     <img src=${url} alt=${alt} width = 450 height = 360 /> 
+  </li>`;
 
-const imageGalleryRef = document.querySelector('#gallery')
-// console.log(imageGalleryRef);
+}
 
-images.forEach(element => imageGalleryRef.insertAdjacentHTML('beforeend',
-              `<li><img src=${element.url} alt=${element.alt} width = 600 height = 600/></li>`)
-);
+const imageListRef = document.querySelector('#gallery');
+
+const imgListMarkup = images.map(makeImgListWithMarkup).join('');
+console.log(imgListMarkup);
+imageListRef.insertAdjacentHTML('beforeend', imgListMarkup);
+
+imageListRef.style.display = 'flex';
+imageListRef.style.justifyContent = 'space-between';
+imageListRef.style.listStyle = 'none';
 
 
 
 
-
-imageGalleryRef.style.display = 'flex';
-imageGalleryRef.style.justifyContent = 'space-between';
-imageGalleryRef.style.listStyle = 'none';

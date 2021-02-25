@@ -7,15 +7,17 @@ const ingredients = [
   'Приправи',
 ];
 
+const productsListRef = document.querySelector('#ingredients')
 
-    const listRef = document.querySelector('#ingredients')
-    ingredients.forEach(element => {
-        const item = document.createElement('li')
-        item.textContent = element;
-        console.log(item);
-        listRef.append(item)
-    });
-    
+const productList = ingredients.map(element => {
+  const item = document.createElement('li');
+  item.textContent = element;
+  console.log(item);
+  return item
+})
+   
+
+productsListRef.append(...productList);
 
 
 
