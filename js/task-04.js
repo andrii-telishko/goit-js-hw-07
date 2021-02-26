@@ -11,10 +11,10 @@ let counterValue = 0;
 
 function onBtnDecrementClc ()  {
 
-    if (counterValue > 0) {
+
         counterValue -= 1
         ref.counter.textContent = counterValue;
-    }
+    
 
 };
 

@@ -29,9 +29,7 @@ const imgListMarkup = images.map(makeImgListWithMarkup).join('');
 console.log(imgListMarkup);
 imageListRef.insertAdjacentHTML('beforeend', imgListMarkup);
 
-imageListRef.style.display = 'flex';
-imageListRef.style.justifyContent = 'space-between';
-imageListRef.style.listStyle = 'none';
+
 
 
 
