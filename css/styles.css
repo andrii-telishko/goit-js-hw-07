@@ -15,3 +15,22 @@
   justify-content: space-between;
   list-style: none;
 }
+
+.task-link {
+  font-size: 35px;
+  text-decoration: none;
+  color: #4caf50;
+}
+
+.main-link {
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.btn-link {
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  display: block;
+}
